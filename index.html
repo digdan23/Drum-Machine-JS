@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="drum-machine">
@@ -46,15 +47,22 @@
             </button>
         </div>
         <div id="powerButton">
-                <p id="power"></p>
-                <button></button>
+            <div class="pack-box">
+                <p id="power-description">Power: Off</p>
+            </div>
+            <label for="power-switch" class="switch">
+                <input type="checkbox" id="power-switch"  onclick="handleChange()"/>
+                <span class="slider"></span>
+            </label>
         </div>
         <div id="display-pad">
             <p id="display"></p>
         </div>
+        <p id="vol-tag">Volume</p>
         <div id="volume">
             <input type="range" id="volume_slider" min="0" max="100" value="50"/>
         </div>   
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
