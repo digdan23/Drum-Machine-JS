@@ -1,7 +1,8 @@
 const drumPad = document.querySelectorAll('.drum-pad')
 const audioClip = document.querySelectorAll('.clip');
 const display = document.getElementById("display");
-let isPowerOn = false;
+const volumeSlider = document.getElementById("volume_slider");
+let isPowerOn = true;
 
 const drumLibrary = {
   Q: { name: "Heater 1", url: "https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" },
@@ -37,7 +38,7 @@ const playAudio = (id) => {
   if(!isPowerOn) return;
   const song = Array.from(audioClip).find(song => song.id === id);
   audio.src = song.src;
-  
+  audio.volume  = volumeSlider.value;
   audio.play();
 }
 
@@ -54,10 +55,14 @@ drumPad.forEach(pad => {
 document.addEventListener("keydown" , (e) => {
   let key = e.key.toUpperCase()
   const instrument = drumLibrary[key];
+  const button = document.getElementById(key).parentElement;
   if(instrument){
-      playAudio(key);
-      display.textContent = instrument.name
+    playAudio(key);
+    button.classList.add("active");
+    setTimeout(() => {
+      button.classList.remove("active")
+}, 100);
+    display.textContent = instrument.name;
+
     }
   })
-
-handleChange()

@@ -9,49 +9,49 @@
 <body>
     <div id="drum-machine">
         <div id="pad-bank">
-            <button class="drum-pad" id="heater_1">
+            <button class="drum-pad" id="Heater_1">
                 <audio class="clip" src="https://cdn.freecodecamp.org/curriculum/drum/Heater-1.mp3" id="Q"></audio>
                 Q
             </button>
-            <button class="drum-pad" id="heater_2">
+            <button class="drum-pad" id="Heater_2">
                 <audio class="clip" src="https://cdn.freecodecamp.org/curriculum/drum/Heater-2.mp3" id="W"></audio>
                 W
             </button>
-            <button class="drum-pad" id="heater_3">
+            <button class="drum-pad" id="Heater_3">
                 <audio class="clip" src="https://cdn.freecodecamp.org/curriculum/drum/Heater-3.mp3" id="E"></audio>
                 E
             </button>
-            <button class="drum-pad" id="heater_4">
+            <button class="drum-pad" id="Heater_4">
                 <audio class="clip" src="https://cdn.freecodecamp.org/curriculum/drum/Heater-4_1.mp3" id="A"></audio>
                 A
             </button>
-            <button class="drum-pad" id="clap">
+            <button class="drum-pad" id="Clap">
                 <audio class="clip" src="https://cdn.freecodecamp.org/curriculum/drum/Heater-6.mp3" id="S"></audio>
                 S
-            </buttton>
-            <button class="drum-pad" id="open_HH">
+            </button>
+            <button class="drum-pad" id="Open_HH">
                 <audio class="clip" src="https://cdn.freecodecamp.org/curriculum/drum/Dsc_Oh.mp3" id="D"></audio>
                 D
             </button>
-            <button class="drum-pad" id="kicknHat">
+            <button class="drum-pad" id="Kick&Hat">
                 <audio class="clip" src="https://cdn.freecodecamp.org/curriculum/drum/Kick_n_Hat.mp3" id="Z"></audio>
                 Z
             </button>
-            <button class="drum-pad" id="kick">
+            <button class="drum-pad" id="Kick">
                 <audio class="clip" src="https://cdn.freecodecamp.org/curriculum/drum/RP4_KICK_1.mp3" id="X"></audio>
                 X
             </button>
-            <button class="drum-pad" id="closed_HH">
+            <button class="drum-pad" id="Closed_HH">
                 <audio class="clip" src="https://cdn.freecodecamp.org/curriculum/drum/Cev_H2.mp3" id="C"></audio>
                 C
             </button>
         </div>
         <div id="powerButton">
             <div class="pack-box">
-                <p id="power-description">Power: Off</p>
+                <p id="power-description">Power: On</p>
             </div>
             <label for="power-switch" class="switch">
-                <input type="checkbox" id="power-switch"  onclick="handleChange()"/>
+                <input type="checkbox" id="power-switch"  onclick="handleChange()" checked/>
                 <span class="slider"></span>
             </label>
         </div>
@@ -60,7 +60,7 @@
         </div>
         <p id="vol-tag">Volume</p>
         <div id="volume">
-            <input type="range" id="volume_slider" min="0" max="100" value="50"/>
+            <input type="range" id="volume_slider" min="0" max="1" step="0.01" value="0.5">
         </div>   
     </div>
     <script src="script.js"></script>

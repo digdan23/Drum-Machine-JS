@@ -58,7 +58,9 @@ body {
   display:flex;
   height:40px;
   width:240px;
-  background:rgb(48, 11, 11)
+  background:rgb(48, 11, 11);
+  justify-content:center;
+  align-items:center;
 }
 
 .pack-box {
@@ -114,4 +116,14 @@ body {
 
 .switch input:checked + .slider::before {
   transform: translateX(28px);
+}
+
+.drum-pad:active{
+  background-color: rgb(132, 33, 33);
+  transform: scale(0.98);
+}
+
+.active{
+  background-color: rgb(132, 33, 33);
+  transform: scale(0.98);
 }
